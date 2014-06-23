@@ -1,0 +1,20 @@
+#header
+  This will be a footer with some links and whatnot
+  %div
+    =params
+  %div
+
+    =params.except(:action, :controller)
+    /=params.require(:pet).permit(:name, :species, :color)
+    %br
+
+    =Pet.count
+    %br
+    =request.path_info
+    =request.env["HTTP_REFERER"]
+
+  %div
+    %p
+    %br
+    =params.inspect
+

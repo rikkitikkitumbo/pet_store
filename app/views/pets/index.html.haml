@@ -1,0 +1,28 @@
+#index_title
+  %h1
+    =PetStore.find(params[:pet_store_id]).name
+    Pets
+  %p
+    This will show all the pets within
+    =PetStore.find(params[:pet_store_id]).name
+
+%div
+
+  -@pets.each do |pet|
+    .a_pet{:style => "background-color: #{pet.color}" }
+      I am
+      %strong= pet.name
+      and I am a
+      %strong= pet.color
+      %strong= pet.species
+      from
+      %strong= PetStore.find(pet.pet_store_id).name
+      !!
+
+
+      %div
+        %a
+        =link_to 'Show', pet_store_pet_path(pet.pet_store_id, pet.id)
+        =link_to 'Edit', edit_pet_store_pet_path(pet.pet_store_id, pet.id)
+        =link_to "Delete", pet_store_pet_path(pet.pet_store_id, pet.id), method: :delete, confirm: "Are you sure you want to delete this pet?"
+

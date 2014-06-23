@@ -1,0 +1,13 @@
+%h1 New
+%p This page will help create a new pet
+
+
+%br
+
+  =simple_form_for [:pet_store, @pet] do |f|
+
+    =f.input :name, placeholder: "pet name"
+    =f.input :species, placeholder: "Dog, Cat, Gold-fish, or Dragon"
+    =f.input :color, placeholder: "don't say blue..."
+    =f.association :pet_store, :selected => params[:pet_store_id], input_html: {class: 'hidden'}, wrapper_html: {class: 'hidden'}
+    =f.button :submit, 'Add Pet!'

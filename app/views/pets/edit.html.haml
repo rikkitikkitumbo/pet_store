@@ -1,0 +1,13 @@
+%h1 Edit
+%p This page will be used to edit certain attributes of a pet.  I was not able to name this page "update"
+%br
+%br
+
+  =simple_form_for [@pet_store, @pet] do |f|
+
+    =f.input :name, placeholder: "pet name"
+    =f.input :species, placeholder: "Dog, Cat, Gold-fish, or Dragon"
+    =f.input :color, placeholder: "don't say blue..."
+    =f.association :pet_store, prompt: "select a store"
+    =f.button :submit
+

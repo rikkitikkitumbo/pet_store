@@ -1,0 +1,6 @@
+%h1 Edit
+%p This page will be used to edit some Pet Stores
+%p
+  =simple_form_for(@pet_store) do |f|
+    =f.input :name, placeholder: 'name of store'
+    =f.button :submit

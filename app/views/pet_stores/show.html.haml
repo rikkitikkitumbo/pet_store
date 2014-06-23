@@ -1,0 +1,19 @@
+
+.a_pet{:style => "background-color: #{store_color(@pet_store.name)}"}
+  %h2
+    %strong= @pet_store.name
+  %p
+    Welcome to
+    %strong=@pet_store.name
+    ="..."
+    =link_to 'Click Here', pet_store_pets_path(@pet_store.id)
+    to see all the pets in this store!
+
+  %br
+  %div
+    =link_to 'Edit Store', edit_pet_store_path(@pet_store.id)
+    =link_to 'Delete Store', @pet_store, method: :delete, confirm: "Are you sure you want to delete an ENTIRE STORE?"
+    =link_to 'Add Pet', new_pet_store_pet_path(@pet_store.id)
+%br
+
+
