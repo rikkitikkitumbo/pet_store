@@ -26,6 +26,7 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 0.3.37)
     arel (4.0.2)
+    attribute_normalizer (1.1.0)
     bcrypt (3.1.7-x86-mingw32)
     bootstrap-will_paginate (0.0.9)
       will_paginate
@@ -170,6 +171,7 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
+  attribute_normalizer
   bootstrap-will_paginate (= 0.0.9)
   capybara
   coffee-rails (~> 4.0.0)

@@ -42,7 +42,7 @@ gem 'simple_form', '~> 3.0.2'
 gem 'sqlite3'
 gem 'seedbank'
 gem 'faker'
-
+gem 'attribute_normalizer'
 
 group :test do
   gem 'rspec-rails'

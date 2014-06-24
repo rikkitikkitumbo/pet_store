@@ -22,6 +22,9 @@ RSpec.configure do |config|
   config.include Capybara::DSL
   config.fuubar_progress_bar_options = { :format => 'My Fuubar! <%B> %p%% %a' }
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
+  config.include AttributeNormalizer::RSpecMatcher, :type => :model
+
+
 
   config.before(:suite) do
     DatabaseCleaner.strategy = :transaction
